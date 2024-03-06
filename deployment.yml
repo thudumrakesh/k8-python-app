@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: car-prediction-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: car-prediction-app
+  template:
+    metadata:
+      labels:
+        app: car-prediction-app
+    spec:
+      containers:
+      - name: car-prediction-app
+        image: rakesh0305/car-app
+        ports:
+        - containerPort: 80
