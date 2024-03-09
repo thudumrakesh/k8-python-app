@@ -1,0 +1,20 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: <storage_class_name>
+provisioner: <provisioner_name>
+parameters:
+  key1: value1
+  key2: value2
+
+#apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: my-storage-class
+provisioner: example.com/storage-provisioner
+parameters:
+  type: fast
+  encryption: true
+  replication: 3
+
+
